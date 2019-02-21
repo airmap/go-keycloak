@@ -1,6 +1,5 @@
 # go-keycloak
 
-[![Build Status](https://travis-ci.org/airmap/go-keycloak.svg?branch=master)](https://travis-ci.org/airmap/go-keycloak)
 [![GoDoc](https://godoc.org/github.com/airmap/go-keycloak?status.svg)](https://godoc.org/github.com/airmap/go-keycloak)
 [![Report Card](https://goreportcard.com/badge/github.com/airmap/go-keycloak)](https://goreportcard.com/report/github.com/airmap/go-keycloak)
 
