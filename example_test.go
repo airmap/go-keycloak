@@ -61,7 +61,6 @@ func ExampleRealmClient_Users() {
 	)
 	ctx := context.Background()
 	var users []*keycloak.PartialUserRepresentation
-	first := 0
 	for {
 		// Break when ctx is canceled.
 		select {
@@ -71,7 +70,7 @@ func ExampleRealmClient_Users() {
 		}
 		// Load the next page of users.
 		usersPage, err := realmClient.Users(ctx, &keycloak.UsersQuery{
-			First: first,
+			First: len(users),
 		})
 		if err != nil {
 			panic(err)
@@ -81,7 +80,6 @@ func ExampleRealmClient_Users() {
 			break
 		}
 		users = append(users, usersPage...)
-		first += len(usersPage)
 	}
 	_ = users
 }
