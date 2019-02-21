@@ -54,7 +54,7 @@ type RESTClient struct {
 }
 
 // An RESTError is an REST error returned by Keycloak. Keycloak does not report
-// errors in a consistent format. The body can be empty, an arbitray string, or
+// errors in a consistent format. The body can be empty, an arbitrary string, or
 // a JSON object, and may contain useful information for debugging.
 type RESTError struct {
 	Request      *http.Request
