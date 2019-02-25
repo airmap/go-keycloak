@@ -14,25 +14,24 @@
 
 package keycloak
 
+// Decision strategies.
 const (
-	// DecisionStrategyAffirmative is the affirmative decision strategy.
 	DecisionStrategyAffirmative DecisionStrategy = "AFFIRMATIVE"
-	// DecisionStrategyUnanimous is the unanimous decision strategy.
-	DecisionStrategyUnanimous DecisionStrategy = "UNANIMOUS"
-	// DecisionStrategyConsensus is the consensus decision strategy.
-	DecisionStrategyConsensus DecisionStrategy = "CONSENSUS"
+	DecisionStrategyUnanimous                    = "UNANIMOUS"
+	DecisionStrategyConsensus                    = "CONSENSUS"
+)
 
-	// PolicyEnforcementModeEnforcing is the enforcing policy enforcement mode.`
-	PolicyEnforcementModeEnforcing PolicyEnforcementMode = "ENFORCING"
-	// PolicyEnforcementModePermissive is the permissive policy enforcement mode.
-	PolicyEnforcementModePermissive PolicyEnforcementMode = "PERMISSIVE"
-	// PolicyEnforcementModeDisabled is the disabled policy enforcement mode.
-	PolicyEnforcementModeDisabled PolicyEnforcementMode = "DISABLED"
+// Policy enforcement modes.
+const (
+	PolicyEnforcementModeEnforcing  PolicyEnforcementMode = "ENFORCING"
+	PolicyEnforcementModePermissive                       = "PERMISSIVE"
+	PolicyEnforcementModeDisabled                         = "DISABLED"
+)
 
-	// LogicPositive is positive logic.
+// Logics.
+const (
 	LogicPositive Logic = "POSITIVE"
-	// LogicNegative is negative logic.
-	LogicNegative Logic = "NEGATIVE"
+	LogicNegative       = "NEGATIVE"
 )
 
 // A ClientID is a client ID.
