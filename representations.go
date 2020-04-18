@@ -17,21 +17,21 @@ package keycloak
 // Decision strategies.
 const (
 	DecisionStrategyAffirmative DecisionStrategy = "AFFIRMATIVE"
-	DecisionStrategyUnanimous                    = "UNANIMOUS"
-	DecisionStrategyConsensus                    = "CONSENSUS"
+	DecisionStrategyUnanimous   DecisionStrategy = "UNANIMOUS"
+	DecisionStrategyConsensus   DecisionStrategy = "CONSENSUS"
 )
 
 // Policy enforcement modes.
 const (
 	PolicyEnforcementModeEnforcing  PolicyEnforcementMode = "ENFORCING"
-	PolicyEnforcementModePermissive                       = "PERMISSIVE"
-	PolicyEnforcementModeDisabled                         = "DISABLED"
+	PolicyEnforcementModePermissive PolicyEnforcementMode = "PERMISSIVE"
+	PolicyEnforcementModeDisabled   PolicyEnforcementMode = "DISABLED"
 )
 
 // Logics.
 const (
 	LogicPositive Logic = "POSITIVE"
-	LogicNegative       = "NEGATIVE"
+	LogicNegative Logic = "NEGATIVE"
 )
 
 // A ClientID is a client ID.

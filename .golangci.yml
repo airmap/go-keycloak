@@ -1,0 +1,15 @@
+linters:
+  enable-all: true
+  disable:
+  - godox
+  - gomnd
+  - lll
+  - maligned
+  - wsl
+
+issues:
+  exclude-rules:
+  - linters:
+    - funlen
+    - scopelint
+    path: "_test\\.go"
