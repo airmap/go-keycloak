@@ -1,0 +1,30 @@
+name: CI
+on:
+  pull_request:
+  push:
+jobs:
+  test:
+    name: Test
+    strategy:
+      matrix:
+        go-version:
+        - 1.13.x
+        - 1.14.x
+        - 1.x
+    runs-on: ubuntu-latest
+    steps:
+    - name: Set up Go
+      uses: actions/setup-go@v1
+      with:
+        go-version: ${{ matrix.go-version }}
+    - name: Checkout
+      uses: actions/checkout@v1
+    - name: Install tools
+      run: |
+        curl -sfL https://install.goreleaser.com/github.com/golangci/golangci-lint.sh | sh -s -- v1.24.0
+    - name: Build
+      run: go build ./...
+    - name: Test
+      run: go test -race ./...
+    - name: Lint
+      run: ./bin/golangci-lint run
